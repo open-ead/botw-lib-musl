@@ -48,6 +48,7 @@ typedef double double_t;
 #if defined(__NEED_max_align_t) && !defined(__DEFINED_max_align_t)
 typedef struct { long long __ll; long double __ld; } max_align_t;
 #define __DEFINED_max_align_t
+#define _GCC_MAX_ALIGN_T
 #endif
 
 #define __LITTLE_ENDIAN 1234

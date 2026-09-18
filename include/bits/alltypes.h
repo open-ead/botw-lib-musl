@@ -378,7 +378,7 @@ typedef unsigned socklen_t;
 #endif
 
 #if defined(__NEED_sa_family_t) && !defined(__DEFINED_sa_family_t)
-typedef unsigned short sa_family_t;
+typedef unsigned char sa_family_t;
 #define __DEFINED_sa_family_t
 #endif
 

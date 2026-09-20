@@ -365,13 +365,15 @@ struct linger {
 #define SCM_CREDENTIALS 0x02
 
 struct sockaddr {
+	unsigned char sa_len;
 	sa_family_t sa_family;
 	char sa_data[14];
 };
 
 struct sockaddr_storage {
+    unsigned char ss_len;
 	sa_family_t ss_family;
-	char __ss_padding[128-sizeof(long)-sizeof(sa_family_t)];
+	char __ss_padding[128-sizeof(long)-sizeof(sa_family_t)-sizeof(unsigned char)];
 	unsigned long __ss_align;
 };
 
